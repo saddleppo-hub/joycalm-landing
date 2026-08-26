@@ -5,15 +5,19 @@
 /* ───────────────────────────────────────────────────────────
    문의 폼 전송 설정
    ───────────────────────────────────────────────────────────
-   FORM_ENDPOINT 를 비워두면(기본값) 방문자의 메일 앱이 열리면서
-   입력한 내용이 담긴 메일이 자동 작성됩니다.
+   FormSubmit(무료·가입 불필요)을 통해 입력 내용이 아래 주소로
+   즉시 메일 발송됩니다. 방문자의 메일 앱은 열리지 않습니다.
 
-   Formspree / Google Apps Script / Getform 등 폼 수집 서비스를
-   쓰실 경우 아래 주소만 채워 넣으면 서버로 바로 전송됩니다.
-   예) const FORM_ENDPOINT = 'https://formspree.io/f/xxxxxxx';
+   ※ 최초 1회 인증 필요
+     첫 문의가 접수되면 joycalm.biz@gmail.com 으로 FormSubmit의
+     확인 메일이 옵니다. 그 안의 링크를 한 번 눌러야 이후 문의가
+     정상 발송됩니다. (인증 전 문의는 전달되지 않습니다)
+
+   다른 서비스나 자체 서버로 옮기려면 FORM_ENDPOINT 만 교체하면
+   됩니다. 비워두면 방문자의 메일 앱을 여는 예전 방식으로 동작합니다.
    ─────────────────────────────────────────────────────────── */
-const FORM_ENDPOINT = '';
-const CONTACT_EMAIL = 'joycalm.biz@gmail.com';
+const CONTACT_EMAIL  = 'joycalm.biz@gmail.com';
+const FORM_ENDPOINT  = 'https://formsubmit.co/ajax/' + CONTACT_EMAIL;
 
 /* ─────────── 모바일 메뉴 ─────────── */
 (function () {
@@ -249,20 +253,44 @@ const CONTACT_EMAIL = 'joycalm.biz@gmail.com';
     submitBtn.disabled = true;
     submitBtn.textContent = '보내는 중…';
 
+    /* 받는 사람이 바로 읽을 수 있도록 한글 항목명으로 보낸다.
+       _ 로 시작하는 값은 FormSubmit 설정용 필드 */
+    const body = {
+      '이름': p.name,
+      '이메일': p.email,
+      '전화번호': p.phone,
+      '소속·직함': p.org || '-',
+      '관심 프로그램': p.interest,
+      '문의 내용': p.message || '-',
+      _subject: `[조이캄 문의] ${p.name} · ${p.interest}`,
+      _replyto: p.email,        // 회신하면 문의자에게 바로 감
+      _template: 'table',
+      _captcha: 'false'
+    };
+
     try {
       const res = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify(p)
+        body: JSON.stringify(body)
       });
-      if (!res.ok) throw new Error('전송 실패');
+
+      let data = null;
+      try { data = await res.json(); } catch (_) { /* 본문이 JSON이 아닐 수 있음 */ }
+      if (!res.ok || (data && data.success === 'false')) {
+        throw new Error((data && data.message) || `전송 실패 (${res.status})`);
+      }
 
       form.reset();
       note.className = 'form-note ok';
       note.textContent = '문의가 접수되었습니다. 영업일 기준 2일 이내에 회신드리겠습니다.';
     } catch (err) {
+      /* 네트워크 차단·서비스 장애 시에도 문의가 유실되지 않도록 메일 앱으로 넘긴다 */
       note.className = 'form-note bad';
-      note.textContent = '전송에 실패했습니다. joycalm.biz@gmail.com 으로 직접 보내주시면 빠르게 확인하겠습니다.';
+      note.innerHTML = '전송에 실패했습니다. <a href="#" id="mailFallback">메일 앱으로 보내기</a>'
+        + ' 또는 <b>joycalm.biz@gmail.com</b> 으로 직접 보내주세요.';
+      const link = document.getElementById('mailFallback');
+      if (link) link.addEventListener('click', (ev) => { ev.preventDefault(); mailtoFallback(p); });
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = '문의 보내기';

@@ -589,6 +589,8 @@ button{ font:inherit; color:inherit; }
 .form-note:empty{ display:none; }
 .form-note.ok{ color:#1c7a4a; font-weight:700; }
 .form-note.bad{ color:#d94b3a; font-weight:700; }
+.form-note.bad a{ color:#d94b3a; }
+.form-note b{ white-space:nowrap; }
 
 /* ─────────── 푸터 ─────────── */
 .footer{ background:var(--page-cream); border-top:1px solid var(--linen); padding:64px 0 32px; }
