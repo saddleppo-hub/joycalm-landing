@@ -52,11 +52,25 @@ const FORM_ENDPOINT  = 'https://formsubmit.co/ajax/' + CONTACT_EMAIL;
   let filter = 'all';
   let expanded = false;
 
-  /* 처음에는 ★ 대표 후기만 보여주고(전체 18개 · 주제별 3개),
-     '더 보기'를 누르면 해당 주제의 나머지가 모두 펼쳐진다 */
+  /* 첫 화면은 ★ 대표 후기만.
+     '전체'에서는 범주당 1개씩(6개)만 보여 모바일에서도 한눈에 들어오게 하고,
+     주제를 고르면 그 범주의 대표 3개를 보여준다.
+     '더 보기'를 누르면 해당 범위의 나머지가 모두 펼쳐진다 */
+  function leadCards(matched) {
+    const featured = matched.filter(q => q.dataset.featured === '1');
+    if (filter !== 'all') return featured;
+
+    const seen = new Set();
+    return featured.filter(q => {
+      if (seen.has(q.dataset.group)) return false;
+      seen.add(q.dataset.group);
+      return true;
+    });
+  }
+
   function render() {
     const matched = quotes.filter(q => filter === 'all' || q.dataset.group === filter);
-    const shown = expanded ? matched : matched.filter(q => q.dataset.featured === '1');
+    const shown = expanded ? matched : leadCards(matched);
 
     quotes.forEach(q => q.classList.add('is-hidden'));
     shown.forEach(q => q.classList.remove('is-hidden'));
