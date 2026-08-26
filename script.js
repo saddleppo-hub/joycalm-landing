@@ -52,10 +52,10 @@ const FORM_ENDPOINT  = 'https://formsubmit.co/ajax/' + CONTACT_EMAIL;
   let filter = 'all';
   let expanded = false;
 
-  /* 첫 화면은 ★ 대표 후기만.
-     '전체'에서는 범주당 1개씩(6개)만 보여 모바일에서도 한눈에 들어오게 하고,
-     주제를 고르면 그 범주의 대표 3개를 보여준다.
-     '더 보기'를 누르면 해당 범위의 나머지가 모두 펼쳐진다 */
+  /* 주제를 고르지 않은 첫 화면(filter === 'all')은 여섯 범주의 대표를
+     하나씩만 보여 모바일에서도 한눈에 들어오게 한다.
+     주제를 고르면 그 범주의 대표 3개, '더 보기'로 나머지가 모두 펼쳐진다.
+     선택된 주제를 다시 누르면 첫 화면으로 돌아온다 */
   function leadCards(matched) {
     const featured = matched.filter(q => q.dataset.featured === '1');
     if (filter !== 'all') return featured;
@@ -67,6 +67,8 @@ const FORM_ENDPOINT  = 'https://formsubmit.co/ajax/' + CONTACT_EMAIL;
       return true;
     });
   }
+
+  const OVERVIEW_NOTE = '여섯 주제의 대표 후기를 하나씩 보여드립니다. 주제를 누르면 더 볼 수 있어요.';
 
   function render() {
     const matched = quotes.filter(q => filter === 'all' || q.dataset.group === filter);
@@ -82,28 +84,39 @@ const FORM_ENDPOINT  = 'https://formsubmit.co/ajax/' + CONTACT_EMAIL;
     }
   }
 
-  function setNote(pill) {
-    if (note) note.textContent = pill.dataset.note || '';
+  function clearPills() {
+    pills.forEach(p => {
+      p.classList.remove('is-active');
+      p.setAttribute('aria-selected', 'false');
+      const dot = p.querySelector('.pill-dot');
+      if (dot) dot.remove();
+    });
+  }
+
+  function activate(pill) {
+    pill.classList.add('is-active');
+    pill.setAttribute('aria-selected', 'true');
+    const dot = document.createElement('span');
+    dot.className = 'pill-dot';
+    dot.setAttribute('aria-hidden', 'true');
+    pill.prepend(dot);
   }
 
   pills.forEach(pill => {
     pill.addEventListener('click', () => {
-      pills.forEach(p => {
-        p.classList.remove('is-active');
-        p.setAttribute('aria-selected', 'false');
-        const dot = p.querySelector('.pill-dot');
-        if (dot) dot.remove();
-      });
-      pill.classList.add('is-active');
-      pill.setAttribute('aria-selected', 'true');
-      const dot = document.createElement('span');
-      dot.className = 'pill-dot';
-      dot.setAttribute('aria-hidden', 'true');
-      pill.prepend(dot);
+      const wasActive = pill.classList.contains('is-active');
+      clearPills();
 
-      filter = pill.dataset.filter;
+      if (wasActive) {
+        filter = 'all';                       // 같은 주제를 다시 누르면 첫 화면으로
+        if (note) note.textContent = OVERVIEW_NOTE;
+      } else {
+        activate(pill);
+        filter = pill.dataset.filter;
+        if (note) note.textContent = pill.dataset.note || '';
+      }
+
       expanded = false;          // 주제를 바꾸면 다시 대표 후기만
-      setNote(pill);
       render();
     });
   });
@@ -112,7 +125,7 @@ const FORM_ENDPOINT  = 'https://formsubmit.co/ajax/' + CONTACT_EMAIL;
     moreBtn.addEventListener('click', () => { expanded = true; render(); });
   }
 
-  setNote(pills.find(p => p.classList.contains('is-active')) || pills[0]);
+  if (note) note.textContent = OVERVIEW_NOTE;
   render();
 })();
 
