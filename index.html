@@ -3,327 +3,682 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>조이캄 JoyCalm — 마음챙김과 컴패션으로 삶과 일의 내면 역량</title>
-<meta name="description" content="조이캄은 마음챙김과 컴패션을 통해 내면의 중심을 세우고, 자신의 가치와 가능성을 삶과 일 속에 펼치도록 돕습니다. 기업 마음챙김 리더십 워크숍 · 임직원 명상교육 · 명상코칭.">
-
+<title>JoyCalm 조이캄 — 마음챙김 리더십 · 명상교육 · 명상코칭</title>
+<meta name="description" content="고요함(Calm)으로 내면에 중심을 세우고, 기쁨(Joy)으로 가능성을 펼칩니다. 송영미 박사가 이끄는 기업·기관 대상 마음챙김 리더십 프로그램, 조직 컴패션 교육, 1:1 임원 명상코칭.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JoyCalm 조이캄 — 마음챙김 리더십">
+<meta property="og:description" content="마음챙김과 컴패션 훈련으로 개인과 조직의 내면역량을 개발합니다.">
+<meta property="og:image" content="assets/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23f9f4f2'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23f47d31'/%3E%3C/svg%3E">
 </head>
 <body>
 
-<!-- ===== 네비게이션 (떠 있는 알약 모양 바) ===== -->
-<header class="nav-wrap">
-  <nav class="nav-pill">
-    <a class="nav-logo" href="#top" aria-label="조이캄 홈">
-      <!-- 8개 점 로고: 3x3 격자에서 가운데만 비어 있음 -->
-      <svg class="dots" viewBox="0 0 18 18" aria-hidden="true">
-        <circle cx="2.5" cy="2.5" r="2.5"/><circle cx="9" cy="2.5" r="2.5"/><circle cx="15.5" cy="2.5" r="2.5"/>
-        <circle cx="2.5" cy="9" r="2.5"/><circle cx="15.5" cy="9" r="2.5"/>
-        <circle cx="2.5" cy="15.5" r="2.5"/><circle cx="9" cy="15.5" r="2.5"/><circle cx="15.5" cy="15.5" r="2.5"/>
-      </svg>
-      <span>조이캄</span>
+<!-- ══════════ 상단 안내 배너 ══════════ -->
+<div class="banner">
+  <div class="banner-inner">
+    <span class="banner-dot" aria-hidden="true"></span>
+    기업·기관 담당자를 위한 <strong>무료 사전 미팅</strong>을 진행합니다 — 프로그램 방향을 함께 설계해 드려요.
+    <a href="#contact">신청하기 →</a>
+  </div>
+</div>
+
+<!-- ══════════ 내비게이션 ══════════ -->
+<header class="nav-wrap" id="nav">
+  <nav class="nav" aria-label="주 메뉴">
+    <a class="brand" href="#top" aria-label="JoyCalm 홈">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span class="brand-word">joycalm</span>
     </a>
 
     <ul class="nav-links">
+      <li><a href="#about">대표 소개</a></li>
       <li><a href="#programs">프로그램</a></li>
-      <li><a href="#capacities">내면 역량</a></li>
-      <li><a href="#cases">수행 사례</a></li>
-      <li><a href="#founder">대표 소개</a></li>
+      <li><a href="#voices">참여 후기</a></li>
+      <li><a href="#archive">활동 아카이브</a></li>
     </ul>
 
-    <a class="btn btn-primary nav-cta" href="#contact">문의하기</a>
+    <div class="nav-right">
+      <a class="nav-text-link" href="mailto:joycalm.biz@gmail.com">이메일</a>
+      <a class="btn btn-blue btn-sm" href="#contact">문의하기</a>
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navDrawer">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
   </nav>
+
+  <div class="nav-drawer" id="navDrawer" hidden>
+    <a href="#about">대표 소개</a>
+    <a href="#programs">프로그램</a>
+    <a href="#voices">참여 후기</a>
+    <a href="#archive">활동 아카이브</a>
+    <a href="#contact">문의하기</a>
+  </div>
 </header>
 
 <main id="top">
 
-  <!-- ===== 히어로 ===== -->
-  <section class="hero">
-    <!-- 주변에 흩어진 이미지 타일 (폴라로이드처럼) -->
-    <div class="collage" aria-hidden="true">
-      <img class="tile t1" src="images/4.jpg"  alt="">
-      <img class="tile t2" src="images/16.jpg" alt="">
-      <img class="tile t3" src="images/26.jpg" alt="">
-      <img class="tile t4" src="images/11.jpg" alt="">
-      <img class="tile t5" src="images/21.jpg" alt="">
-      <img class="tile t6" src="images/7.jpg"  alt="">
+<!-- ══════════ 히어로 ══════════ -->
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Mindfulness · Compassion · Leadership</p>
+
+    <h1 class="display">
+      고요함으로 중심을 세우고,<br>
+      기쁨으로 <span class="hl">가능성</span>을 펼칩니다.
+    </h1>
+
+    <div class="hero-lead">
+      <p>조이캄은 마음챙김과 컴패션 훈련을 통해 개인과 조직이 자신의 내적 상태를 알아차리고 조율하며, 더 명료하게 관계하고 가치에 따라 행동하도록 돕습니다.</p>
+      <p>명상교육, 명상코칭과 마음챙김 리더십 프로그램을 통해 내면의 성찰이 삶과 일의 실제 변화로 이어지도록 지원합니다.</p>
     </div>
 
-    <div class="hero-copy">
-      <p class="eyebrow">JOYCALM</p>
-      <h1>
-        마음챙김과 컴패션으로 <br>
-        삶과 일의 <em>내면 역량</em>을 <br>
-        기릅니다
-      </h1>
-      <p class="hero-sub">Building inner Capacity for Life and Work <br>through Mindfulness and Compassion</p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="#contact">프로그램 문의하기</a>
-        <a class="btn btn-outline" href="#programs">프로그램 보기</a>
+    <div class="hero-actions">
+      <a class="btn btn-blue" href="#contact">문의하기</a>
+      <a class="btn btn-dark" href="#programs">프로그램 살펴보기</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <figure class="hero-figure">
+      <img src="assets/hero.jpg" alt="호숫가 리트릿 공간에서 임직원들이 매트에 앉아 ‘리더의 자기 친절·자애 명상’ 세션에 참여하는 모습" fetchpriority="high" width="1800" height="1032">
+      <figcaption class="toast">
+        <span class="toast-avatar" aria-hidden="true"></span>
+        <span class="toast-body">
+          <b>참여자</b>
+          단순 회복이 아니라 집중력을 키우고, 효율적인 업무까지 할 수 있다는 점이 인상적이었어요.
+        </span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <ul class="stats">
+      <li><span class="stat-num">2016~</span><span class="stat-label">기업·기관 명상교육 운영</span></li>
+      <li><span class="stat-num">S · H 그룹</span><span class="stat-label">임직원·리더십 프로그램 공동 기획</span></li>
+      <li><span class="stat-num">C-Level</span><span class="stat-label">경영진 1:1 명상 리더십 코칭</span></li>
+      <li><span class="stat-num">박사 · KPC</span><span class="stat-label">IT심리 박사 · 한국전문코치</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════ 대상 ══════════ -->
+<section class="band" id="audience">
+  <div class="wrap">
+    <p class="eyebrow center">Who we work with</p>
+    <h2 class="heading-lg center">이런 분들과 함께합니다</h2>
+    <p class="section-lead center">압박과 불확실성 속에서 자신을 잃지 않아야 하는 사람들, 그리고 그들이 속한 조직을 위한 훈련입니다.</p>
+
+    <ul class="tiles">
+      <li class="tile"><span>기업 리더 · 임원 · 팀장</span><i class="ico ico-bolt" aria-hidden="true"></i></li>
+      <li class="tile"><span>조직 구성원 · 임직원</span><i class="ico ico-moon" aria-hidden="true"></i></li>
+      <li class="tile"><span>의료 · 돌봄 종사자</span><i class="ico ico-spiral" aria-hidden="true"></i></li>
+      <li class="tile"><span>교사 · 학부모</span><i class="ico ico-smile" aria-hidden="true"></i></li>
+      <li class="tile"><span>상담자 · 코치</span><i class="ico ico-circle" aria-hidden="true"></i></li>
+      <li class="tile"><span>C-Level 경영진</span><i class="ico ico-speech" aria-hidden="true"></i></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════ 파트너사 로고 ══════════ -->
+<section class="band band-partners" id="partners">
+  <div class="wrap">
+    <p class="eyebrow center">Partners</p>
+    <h2 class="heading-lg center">함께해온 기업·기관</h2>
+    <p class="section-lead center">기업과 공공기관, 병원과 학교 현장에서 마음챙김·컴패션 프로그램을 함께 만들어왔습니다.</p>
+  </div>
+
+  <div class="marquee" role="region" aria-label="함께해온 기업·기관 로고">
+    <div class="marquee-track">
+      <ul class="marquee-set">
+        <li><span class="plogo"><img src="assets/partners/samsung-electronics.png" alt="삼성전자"></span></li>
+        <li><span class="plogo"><img src="assets/partners/hyundai-motor-group.png" alt="현대자동차그룹"></span></li>
+        <li><span class="plogo"><img src="assets/partners/hyundai-mobis.png" alt="현대모비스"></span></li>
+        <li><span class="plogo"><img src="assets/partners/hyundai-capital.png" alt="현대캐피탈"></span></li>
+        <li><span class="plogo"><img src="assets/partners/hanscoaching.png" alt="한스코칭"></span></li>
+        <li><span class="plogo"><img src="assets/partners/samsung-noble-county.svg" alt="삼성노블카운티"></span></li>
+        <li><span class="plogo"><img src="assets/partners/ajou-cancer-center.png" alt="아주대학교병원 경기지역암센터"></span></li>
+        <li><span class="plogo"><img src="assets/partners/seoul-social-service.png" alt="서울시사회서비스원"></span></li>
+        <li><span class="plogo"><img src="assets/partners/gyeonggi-hrd.png" alt="경기도인재개발원"></span></li>
+        <li><span class="plogo"><img src="assets/partners/gyeongbuk-education.png" alt="경상북도교육청"></span></li>
+        <li><span class="plogo"><img src="assets/partners/gwnu.svg" alt="국립강릉원주대학교"></span></li>
+        <li><span class="plogo"><img src="assets/partners/g-marine-service.png" alt="지마린서비스"></span></li>
+        <li><span class="plogo"><img src="assets/partners/organoid-sciences.png" alt="오가노이드사이언스"></span></li>
+        <li><span class="plogo"><img src="assets/partners/gunpo-welfare.png" alt="군포시장애인종합복지관"></span></li>
+        <li><span class="plogo"><img src="assets/partners/jungnam-elementary.png" alt="정남초등학교"></span></li>
+        <li><span class="plogo"><img src="assets/partners/baekseong-elementary.png" alt="백성초등학교"></span></li>
+      </ul>
+      <!-- 끊김 없는 순환을 위한 복제본 -->
+      <ul class="marquee-set" aria-hidden="true">
+        <li><span class="plogo"><img src="assets/partners/samsung-electronics.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/hyundai-motor-group.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/hyundai-mobis.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/hyundai-capital.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/hanscoaching.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/samsung-noble-county.svg" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/ajou-cancer-center.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/seoul-social-service.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/gyeonggi-hrd.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/gyeongbuk-education.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/gwnu.svg" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/g-marine-service.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/organoid-sciences.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/gunpo-welfare.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/jungnam-elementary.png" alt=""></span></li>
+        <li><span class="plogo"><img src="assets/partners/baekseong-elementary.png" alt=""></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 대표 소개 ══════════ -->
+<section class="band" id="about">
+  <div class="wrap">
+    <p class="eyebrow">Founder</p>
+    <h2 class="heading-lg">대표 소개</h2>
+
+    <div class="founder">
+      <figure class="founder-photo">
+        <img src="assets/founder.jpg" alt="조이캄 대표 송영미 박사 프로필 사진" loading="lazy" width="732" height="1100">
+      </figure>
+
+      <div class="founder-body">
+        <h3 class="heading">송영미 박사</h3>
+        <p class="founder-role">Mindfulness Leadership Educator&nbsp;· Meditation Coach&nbsp;· Founder, JoyCalm</p>
+        <p>마음챙김과 컴패션을 기반으로 개인과 조직의 내면역량을 개발합니다. 기업 리더와 임직원, 의료·돌봄 종사자, 교사와 학부모, 상담자와 코치를 대상으로 명상교육, 명상코칭, 마음챙김 리더십 프로그램을 기획하고 운영합니다.</p>
+        <p>특히 명상을 단순한 휴식이 아니라, 자신의 상태를 알아차리고 더 나은 관계와 행동을 선택하도록 돕는 <strong>‘내 안의 성찰파트너를 키우는 훈련’</strong>으로 확장하고 있습니다.</p>
+
+        <div class="founder-side">
+          <img src="assets/gallery/g05.jpg" alt="강연 중인 송영미 박사" loading="lazy" width="1000" height="1035">
+          <img src="assets/gallery/g03.jpg" alt="한옥 공간에서 진행된 명상 세션" loading="lazy" width="1000" height="750">
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- ===== 철학 ===== -->
-  <section class="section statement">
-    <p class="eyebrow">Calm으로 내면의 중심을 세우고, Joy로 가능성을 펼칩니다</p>
-    <h2>안으로는 고요하게, <br>밖으로는 생동감 있게.</h2>
-    <div class="statement-body">
-      <p>조이캄은 마음챙김과 컴패션을 통해 내면의 중심을 세우고, <br>자신의 가치와 가능성을 삶과 일 속에 펼치도록 돕습니다.</p>
-      <p>명상은 멈추는 데서 끝나지 않습니다. <br>더 명료하게 선택하고 온전히 행동하기 위한 훈련입니다.</p>
-    </div>
-  </section>
-
-  <!-- ===== 프로그램 ===== -->
-  <section class="section" id="programs">
-    <div class="section-head">
-      <p class="eyebrow">CORPORATE MINDFULNESS SOLUTIONS</p>
-      <h2>조직을 위한 세 가지 프로그램</h2>
-      <p class="lead">조이캄은 정해진 프로그램을 반복하기보다 조직의 목적, 참여자의 특성,
-      업무환경과 전달방식에 맞춰 마음챙김 프로그램을 기획 개발하고 운영합니다.</p>
-    </div>
-
-    <div class="grid-3">
-      <article class="card">
-        <img src="images/5.jpg" alt="마인드풀 리더십 워크숍 진행 장면">
-        <h3>마인드풀 리더십 워크숍</h3>
-        <p class="card-role">리더십 그룹을 위한</p>
-        <p class="card-body">리더의 주의력과 정서적 균형, 성찰과 포용을 기릅니다.
-        임원과 팀장 등 리더십 그룹을 대상으로 마음챙김 실습과 성찰적 대화를 결합해,
-        압박 속에서도 자신의 상태를 살피고 보다 명료하게 판단하고 관계 맺도록 돕습니다.</p>
-      </article>
-
-      <article class="card">
-        <img src="images/6.jpg" alt="임직원 마음챙김 컴패션 프로그램 강의 장면">
-        <h3>마음챙김 컴패션 프로그램</h3>
-        <p class="card-role">임직원을 위한</p>
-        <p class="card-body">스트레스 관리와 심리적 회복, 건강한 업무 몰입을 지원합니다.
-        구성원이 자신의 몸과 감정, 생각을 알아차리고 지속되는 스트레스에 보다 유연하게
-        대응하도록 조직의 환경과 교육 목적에 맞춰 설계합니다.</p>
-      </article>
-
-      <article class="card">
-        <img src="images/7.jpg" alt="임원과 리더를 위한 명상코칭">
-        <h3>명상코칭</h3>
-        <p class="card-role">임원과 리더를 위한</p>
-        <p class="card-body">감정적 부담을 조절하고 판단의 명료성을 높입니다.
-        높은 책임과 복잡한 관계 속에서 자신의 내적 상태를 알아차리고,
-        더 침착하고 명료하게 선택하도록 돕습니다. 1:1 비밀보장 코칭과
-        리더십 그룹 명상코칭으로 운영할 수 있습니다.</p>
-      </article>
-    </div>
-
-    <p class="note">대면 교육 &nbsp;|&nbsp; 리더십 명상 과정 &nbsp;|&nbsp; 디지털 콘텐츠 &nbsp;|&nbsp; 특수 직무 프로그램</p>
-  </section>
-
-  <!-- ===== 4가지 내면 역량 ===== -->
-  <section class="section" id="capacities">
-    <div class="section-head">
-      <p class="eyebrow">MINDFUL LEADERSHIP CORE CAPACITIES</p>
-      <h2>조이캄이 기르는 <br>리더의 네 가지 내면 역량</h2>
-      <p class="lead">마음챙김과 컴패션을 삶과 일의 역량으로 전환합니다.</p>
-    </div>
-
-    <div class="grid-4">
-      <article class="cap">
-        <p class="cap-en">ATTENTION</p>
-        <h3>주의력 <br><span>핵심으로 돌아오는 힘</span></h3>
-        <p class="cap-base">주의가 흩어졌음을 알아차리고, 지금 중요한 대상으로 다시 돌아오는 능력입니다.</p>
-        <p class="cap-work">정보 과부하와 잦은 전환 속에서도 우선순위를 분명히 하고 핵심 과제에 집중하도록 돕습니다.</p>
-        <p class="cap-out">주의력 → 업무 몰입력</p>
-      </article>
-
-      <article class="cap">
-        <p class="cap-en">EMOTION REGULATION</p>
-        <h3>정서력 <br><span>반응에 휩쓸리지 않는 힘</span></h3>
-        <p class="cap-base">감정을 억누르거나 없애는 것이 아니라, 자신의 감정을 알아차리고 조절하는 능력입니다.</p>
-        <p class="cap-work">압박과 갈등 속에서도 자동적으로 반응하기보다 대화와 판단을 위한 내적 여유를 확보하도록 돕습니다.</p>
-        <p class="cap-out">정서력 → 회복탄력성</p>
-      </article>
-
-      <article class="cap">
-        <p class="cap-en">REFLECTION</p>
-        <h3>성찰력 <br><span>판단의 틀을 살피는 힘</span></h3>
-        <p class="cap-base">자신의 감정과 경험, 가정과 편향이 판단에 어떤 영향을 주는지 살피는 능력입니다.</p>
-        <p class="cap-work">복잡한 이해관계 속에서 사실과 해석을 구분하고, 핵심을 명료하게 바라보며 책임 있는 선택을 하도록 돕습니다.</p>
-        <p class="cap-out">성찰력 → 명료한 의사결정</p>
-      </article>
-
-      <article class="cap">
-        <p class="cap-en">COMPASSION</p>
-        <h3>포용력 <br><span>사람을 이해하고 응답하는 힘</span></h3>
-        <p class="cap-base">자신과 타인이 겪는 어려움을 알아차리고, 그 순간 필요한 방식으로 응답하는 능력입니다.</p>
-        <p class="cap-work">심리적 안전감과 신뢰를 높이고, 갈등 속에서도 관계를 해치지 않으며 협력적인 대화를 이어가도록 돕습니다.</p>
-        <p class="cap-out">포용력 → 컴패션 리더십</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- ===== 명상코칭은 무엇이 다른가 ===== -->
-  <section class="section compare-section">
-    <div class="section-head">
-      <p class="eyebrow">1:1 EXECUTIVE &amp; LEADERSHIP GROUP COACHING</p>
-      <h2>명상코칭은 무엇이 다른가</h2>
-    </div>
-
-    <div class="grid-2">
-      <article class="compare">
-        <h3>일반 코칭</h3>
-        <p>질문과 대화를 통해 목표와 관점을 탐색하고 새로운 선택과 행동을 발견합니다.</p>
-      </article>
-      <article class="compare compare-accent">
-        <h3>명상 코칭</h3>
-        <p>코칭의 질문과 대화에 호흡, 몸, 감정, 생각을 알아차리는 명상 실습을 결합합니다.</p>
-        <p>자동적인 반응에서 한걸음 물러나 자신의 내적 상태를 살피고,
-        지금 필요한 선택을 더 명료하게 바라보도록 돕습니다.</p>
-      </article>
-    </div>
-
-    <div class="grid-2 coaching-detail">
-      <article class="compare">
-        <h3>프라이빗 1:1 명상코칭</h3>
-        <p class="card-role">의사결정권자를 위한</p>
+    <div class="cred-grid">
+      <article class="cred">
+        <h4><span class="cred-ico" data-c="orange" aria-hidden="true"></span>소속 및 경력</h4>
         <ul>
-          <li>중요한 의사결정과 어려운 대화</li>
-          <li>감정적 반응과 스트레스 관리</li>
-          <li>리더십 방향과 가치의 재정렬</li>
-          <li>개인별 명상 실습과 행동 실험</li>
+          <li><b>2022–현재</b> 조이캄 대표</li>
+          <li><b>2023–현재</b> 한스코칭 파트너 명상코치</li>
+          <li><b>2015–2021</b> 아주대학교 건강명상연구센터 연구원</li>
         </ul>
       </article>
-      <article class="compare">
-        <h3>리더십 그룹 명상코칭</h3>
-        <p class="card-role">리더십 그룹을 위한</p>
+
+      <article class="cred cred-wide">
+        <h4><span class="cred-ico" data-c="blue" aria-hidden="true"></span>대표 활동</h4>
         <ul>
-          <li>압박 속 자기조절과 의사결정</li>
-          <li>어려운 대화와 관계의 여유</li>
-          <li>주의력 회복과 업무 몰입</li>
-          <li>번아웃 예방과 내적 회복</li>
-          <li>리더의 가치와 리더십 방향</li>
+          <li><b>2019–현재</b> S 그룹 외 임직원 명상교육 프로그램 공동 기획·개발 및 운영</li>
+          <li><b>2022–현재</b> H 자동차그룹 외 Mindful Leadership 프로그램 기획·개발 및 운영</li>
+          <li><b>2023–현재</b> 국내 기업 C-Level 경영진 1:1 명상 리더십 코칭</li>
+          <li><b>2016–2019</b> 아주대학교병원 암생존자통합지지센터 — 암생존자 대상 인지기능 및 이완명상 프로그램 연구·개발 및 운영</li>
+          <li><b>2018–2020</b> 서울시사회서비스원 — 돌봄 종사자 번아웃 예방 명상 프로그램 연구·기획 및 운영</li>
+        </ul>
+      </article>
+
+      <article class="cred">
+        <h4><span class="cred-ico" data-c="violet" aria-hidden="true"></span>학력 및 전문 자격</h4>
+        <ul>
+          <li>아주대학교 대학원 IT심리 박사</li>
+          <li>아주대학교 대학원 건강심리학 석사</li>
+          <li>건강심리전문가 <span class="muted">| 한국심리학회</span></li>
+          <li>명상지도전문가(R) <span class="muted">| 한국명상학회</span></li>
+          <li>한국전문코치(KPC) <span class="muted">| 한국코치협회</span></li>
+        </ul>
+      </article>
+
+      <article class="cred">
+        <h4><span class="cred-ico" data-c="yellow" aria-hidden="true"></span>주요 수상 및 발표</h4>
+        <ul>
+          <li><b>2025</b> 대한민국 제22회 코칭컨페스티벌 단독 세션 발표 — 마음챙김과 리더십</li>
+          <li><b>2023</b> 원효학술상 수상</li>
+          <li><b>2019</b> 한국건강심리학회 우수논문상 수상</li>
+        </ul>
+      </article>
+
+      <article class="cred">
+        <h4><span class="cred-ico" data-c="celeste" aria-hidden="true"></span>주요 전문교육</h4>
+        <ul>
+          <li>Co-Active Trained Coach</li>
+          <li>K-MBSR Certified Master</li>
+          <li>마음챙김·컴패션 전문과정 수료 <span class="muted">(MSC · CBCT · CCT)</span></li>
+          <li>NLP, ACT Growth Trainer</li>
+        </ul>
+      </article>
+
+      <article class="cred cred-full">
+        <h4><span class="cred-ico" data-c="indigo" aria-hidden="true"></span>연구 및 논문</h4>
+        <ul class="cred-refs">
+          <li><b>2023</b> 송영미. 심리 전문가의 마음챙김과 자비심에 대한 군집비교: 직무소진, 정서노동 수행방식, 정서강도, 정서명료성의 차이. <span class="muted">한국심리학회지: 코칭, 7(1), 91–116.</span></li>
+          <li><b>2022</b> 송영미. 마음챙김과 자비심 기반 직무소진 예방 명상프로그램(MCBP) 개발 및 효과. <span class="muted">아주대학교 대학원 박사학위논문.</span></li>
+          <li><b>2019</b> 송영미, 김완석. 마음챙김이 직무탈진에 미치는 영향: 두 가지 감정노동 전략의 차별적 매개효과. <span class="muted">한국심리학회지: 산업 및 조직, 32(2), 135–162.</span></li>
+          <li><b>2017</b> 송영미. 마음챙김이 돌봄 종사자의 감정노동에 미치는 효과. <span class="muted">석사학위논문.</span></li>
         </ul>
       </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== 수행 사례 ===== -->
-  <section class="section" id="cases">
-    <div class="section-head">
-      <p class="eyebrow">SELECTED CORPORATE MINDFULNESS PROJECTS</p>
-      <h2>기업 마음챙김 주요 수행 사례</h2>
-    </div>
+<!-- ══════════ 프로그램 ══════════ -->
+<section class="band" id="programs">
+  <div class="wrap">
+    <p class="eyebrow">Mindful Business Solutions</p>
+    <h2 class="heading-lg">마인드풀 비즈니스 솔루션</h2>
+    <p class="section-lead">조직의 문화와 구성원의 특성을 이해한 뒤, 목적에 맞는 프로그램을 맞춤 설계합니다.</p>
 
-    <div class="grid-3">
-      <article class="card">
-        <img src="images/10.jpg" alt="국내 대기업 S그룹 명상교육">
-        <h3>국내 대기업 S그룹 명상교육</h3>
-        <p class="card-role">2019~ &nbsp;|&nbsp; 임직원 마음챙김 명상 프로그램 운영, 경력 입사자 마음챙김 온보딩 프로그램 개발 및 운영</p>
-        <p class="card-body">높은 업무 요구 속에서 자신의 감정적 부담을 알아차리고 조절하며,
-        심리적 회복과 업무 몰입, 공감적 관계를 지원하는 프로그램</p>
-      </article>
-
-      <article class="card">
-        <img src="images/11.jpg" alt="글로벌 자동차기업 마음챙김 리더십 프로그램">
-        <h3>글로벌 자동차기업 <br>마음챙김 리더십 프로그램</h3>
-        <p class="card-role">2022~ &nbsp;|&nbsp; 임직원 리더십 마음챙김 프로그램 기획·개발 및 운영, 사내 디지털 명상 가이드 콘텐츠 개발 및 녹음</p>
-        <p class="card-body">리더의 주의력과 정서적 균형, 성찰력을 기르고 압박 속에서도 명료하게 판단하고
-        관계 맺도록 돕는 마음챙김 리더십 프로그램과 일상 실천을 지원하는 디지털 명상 콘텐츠 개발</p>
-      </article>
-
-      <article class="card">
-        <img src="images/12.jpg" alt="해운 선박 관리 기업 리더십 및 마음관리">
-        <h3>해운 선박 관리 기업 <br>리더십 &amp; 마음관리</h3>
-        <p class="card-role">주니어·시니어 사관 대상 명상 프로그램 개발 및 운영</p>
-        <p class="card-body">고립감과 압박이 높은 해상 근무환경을 고려해, 주니어 사관의 자기조절과 마음관리,
-        시니어 사관의 안정적 선박 리더십을 지원하는 맞춤형 프로그램</p>
-      </article>
-    </div>
-
-    <div class="section-head sub-head">
-      <p class="eyebrow">SELECTED MINDFUL LEADERSHIP PROJECTS</p>
-      <h3 class="h-mid">현대자동차그룹사 마음챙김 리더십 운영 사례</h3>
-      <p class="lead">5년차 장기 과정과 그룹사 적용 기록</p>
-    </div>
-
-    <div class="grid-3">
-      <article class="case-text">
-        <h4>현대자동차그룹</h4>
-        <p class="card-role">임원, 팀장 및 리더십 그룹 &nbsp;|&nbsp; 2022년부터 온·오프 정기 과정 기획 및 운영</p>
-        <ul>
-          <li>마음챙김 리더십 워크숍</li>
-          <li>온라인 모닝 리트릿 과정</li>
-          <li>마인드풀 팝업 클래스</li>
+    <!-- 1 -->
+    <article class="prog prog-yellow">
+      <div class="prog-text">
+        <p class="prog-num">01</p>
+        <h3 class="heading">마음챙김 리더십 프로그램</h3>
+        <p class="prog-en">Mindful Leadership Program</p>
+        <p>리더가 자신의 내적 상태와 관계적 영향력을 알아차리고, 압박과 불확실성 속에서도 더 명료하고 인간적인 선택을 하도록 돕습니다.</p>
+        <p>CEO, 임원, 팀장 등 조직의 리더를 대상으로 마음챙김, 컴패션, 성찰적 대화와 코칭을 결합한 맞춤형 프로그램을 설계하고 진행합니다.</p>
+        <p class="prog-topics-label">주요 주제</p>
+        <ul class="topics">
+          <li>리더의 내적 상태와 영향력</li>
+          <li>정서적 반응과 자기조절</li>
+          <li>주의력 회복과 명료한 판단</li>
+          <li>어려운 대화와 관계</li>
+          <li>컴패션과 심리적 안전감</li>
+          <li>가치에 따른 리더십 행동</li>
         </ul>
-        <p class="card-body">일회성 체험을 넘어, 리더가 일상에서 주의력과 정서적 균형, 성찰과 포용을
-        지속적으로 훈련하도록 돕는 마음챙김 리더십 과정</p>
-      </article>
+        <a class="btn btn-dark" href="#contact">이 프로그램 문의하기</a>
+      </div>
+      <div class="prog-media">
+        <img src="assets/prog-leadership.jpg" alt="법당에서 진행된 리더십 명상 세션에서 마이크를 들고 이야기하는 송영미 박사" loading="lazy" width="896" height="1388">
+      </div>
+    </article>
 
-      <article class="case-text">
-        <h4>현대캐피탈</h4>
-        <p class="card-role">팀장 이상 리더 &nbsp;|&nbsp; 1DAY 마음챙김 리더십 워크숍</p>
-        <p class="card-body">성과와 의사결정 압박 속에서도 자신의 상태를 알아차리고, 감정에 매몰되지 않으며,
-        정서적 균형과 판단의 명료성을 회복하도록 돕는 체험형 과정</p>
-      </article>
+    <!-- 2 -->
+    <article class="prog prog-celeste">
+      <div class="prog-text">
+        <p class="prog-num">02</p>
+        <h3 class="heading">조직 마음챙김·컴패션 프로그램</h3>
+        <p class="prog-en">Mindfulness &amp; Compassion Program for Organizations</p>
+        <p>조직 구성원이 지속적인 업무 압박 속에서도 자신의 상태를 돌보고, 집중력과 회복력, 관계의 질을 유지하도록 돕습니다.</p>
+        <p>단순한 휴식에 머무르지 않고, 교육에서 배운 알아차림과 회복의 기술을 실제 업무와 관계 속에서 사용할 수 있도록 구성합니다.</p>
+        <p class="prog-topics-label">주요 주제</p>
+        <ul class="topics">
+          <li>스트레스와 번아웃 예방</li>
+          <li>주의력 회복과 업무 전환</li>
+          <li>감정조절과 자기돌봄</li>
+          <li>공감피로와 컴패션</li>
+          <li>관계와 협업</li>
+          <li>일상에서 실천하는 짧은 명상</li>
+        </ul>
+        <a class="btn btn-dark" href="#contact">이 프로그램 문의하기</a>
+      </div>
+      <div class="prog-media">
+        <img src="assets/prog-org.jpg" alt="숲이 보이는 대형 명상홀에 좌식 의자와 매트가 줄지어 세팅된 조직 명상 프로그램 공간" loading="lazy" width="1600" height="1200">
+      </div>
+    </article>
 
-      <article class="case-text">
-        <h4>현대모비스</h4>
-        <p class="card-role">팀장 이상 리더십 그룹 &nbsp;|&nbsp; 마음챙김 리더십 과정 15회 실행</p>
-        <p class="card-body">빠른 변화와 높은 업무 요구 속에서 리더가 자신의 에너지를 살피고,
-        자기조절력과 정서적 균형, 팀을 이끄는 내적 이유를 기르도록 돕는 실천형 과정</p>
-      </article>
-    </div>
-  </section>
+    <!-- 3 -->
+    <article class="prog prog-violet">
+      <div class="prog-text">
+        <p class="prog-num">03</p>
+        <h3 class="heading">명상 리더십 코칭</h3>
+        <p class="prog-en">Executive Mindfulness Coaching</p>
+        <p>책임과 의사결정의 무게를 감당하는 리더가 자신의 내적 상태를 성찰하고, 감정적 반응에서 벗어나 더 명료한 관점과 행동을 선택하도록 돕습니다.</p>
+        <p>철저한 비밀보장을 기반으로 명상과 코칭을 결합하여 리더의 자기인식, 정서조절, 관계적 영향력과 의사결정 과정을 탐색합니다. 코치는 답을 대신 제시하기보다, 리더가 자신의 내면에 성찰 기능을 키우도록 <strong>성찰파트너</strong>로 함께합니다.</p>
+        <p class="prog-topics-label">주요 주제</p>
+        <ul class="topics">
+          <li>리더의 감정적 반응과 트리거</li>
+          <li>가치와 의사결정</li>
+          <li>관계 갈등과 어려운 대화</li>
+          <li>리더의 고립감과 자기돌봄</li>
+          <li>관점 전환과 행동실험</li>
+          <li>지속 가능한 리더십 상태</li>
+        </ul>
+        <a class="btn btn-dark" href="#contact">이 프로그램 문의하기</a>
+      </div>
+      <div class="prog-media">
+        <img src="assets/prog-coaching.jpg" alt="제22회 대한민국 코칭컨페스티벌 무대에서 마음챙김과 리더십을 주제로 단독 세션을 발표하는 송영미 박사" loading="lazy" width="1000" height="1750">
+      </div>
+    </article>
 
-  <!-- ===== 대표 소개 ===== -->
-  <section class="section founder" id="founder">
-    <div class="founder-img">
-      <img src="images/3.jpg" alt="조이캄 송영미 대표">
-    </div>
-    <div class="founder-copy">
-      <p class="eyebrow">FOUNDER &amp; MINDFULNESS LEADERSHIP COACH</p>
-      <h2>송영미 대표</h2>
-      <p class="lead">심리학, 코칭, 명상을 연결하는 내면 역량 전문가</p>
-      <p class="card-body">심리학, 코칭, 명상 훈련을 통합해 리더의 내적 변화가
-      실제 선택과 행동으로 이어지도록 돕습니다.</p>
-      <ul class="credentials">
-        <li>IT심리 박사</li>
-        <li>한국심리학회 공인 건강심리전문가</li>
-        <li>한국명상학회 공인 명상지도전문가</li>
-        <li>KPC 전문코치</li>
-        <li>Co-Active Practitioner</li>
-      </ul>
-      <p class="note note-left">마음챙김 리더십 &nbsp;|&nbsp; 명상코칭 &nbsp;|&nbsp; 기업교육</p>
-    </div>
-  </section>
+    <!-- 4 -->
+    <article class="prog prog-blush">
+      <div class="prog-text">
+        <p class="prog-num">04</p>
+        <h3 class="heading">K-MBSR 마음챙김 명상 과정</h3>
+        <p class="prog-en">Korean Mindfulness-Based Stress Reduction</p>
+        <p>상담·코칭·교육 현장에서 마음챙김을 깊이 있게 활용하고 싶은 전문가와, 자신의 마음챙김 기반을 체계적으로 다지고 싶은 분들을 위한 공개 과정입니다.</p>
+        <p>온라인 6회(Zoom)와 대면 집중수련 1회(서울)로 구성된 7회기 과정으로, 마음챙김 명상의 체계와 기본기를 순서대로 익힙니다.</p>
+        <p class="prog-meta"><span class="prog-tag">공개 과정</span>2026년 9월 7일 – 10월 26일 · 온라인 6회 + 대면 1회</p>
+        <p class="prog-topics-label">7회기 커리큘럼</p>
+        <ul class="topics">
+          <li>먹기명상 · 바디스캔</li>
+          <li>바디스캔 · 호흡명상</li>
+          <li>정좌명상(호흡·몸·감각)</li>
+          <li>움직임명상(요가명상)</li>
+          <li>정좌명상(생각·감정)</li>
+          <li>통합수련 · 관계 마음챙김</li>
+          <li>산명상 · 실천계획</li>
+        </ul>
+        <a class="btn btn-dark" href="https://saddleppo-hub.github.io/mbsr2609/" target="_blank" rel="noopener noreferrer">
+          과정 안내 · 신청하기
+          <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M5.5 2.5h8v8M13.5 2.5 6 10M11 12.5v1h-9v-9h1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="prog-media">
+        <img src="assets/prog-mbsr.jpg" alt="마 소재 방석보를 앞에 두고 원목 바닥 위 화분이 흐릿하게 보이는 고요한 명상 수련 공간" loading="lazy" width="1200" height="1600">
+      </div>
+    </article>
+  </div>
+</section>
 
-  <!-- ===== 문의 ===== -->
-  <section class="section contact" id="contact">
-    <p class="eyebrow">CONTACT</p>
-    <h2>조직에 필요한 마음챙김은 <br>모두 같지 않습니다.</h2>
-    <p class="lead">조이캄은 조직의 목적과 참여자의 특성에 맞춰 <br>기업 마음챙김 프로그램을 기획하고 운영합니다.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="mailto:joycalm.biz@gmail.com">joycalm.biz@gmail.com</a>
-      <a class="btn btn-outline" href="https://www.instagram.com/joycalm.biz/" target="_blank" rel="noopener">@joycalm.biz</a>
+<!-- ══════════ 참여 후기 ══════════ -->
+<section class="band band-white" id="voices">
+  <div class="wrap">
+    <p class="eyebrow center">Voices</p>
+    <h2 class="heading-lg center">마음챙김 리더십 워크숍 참여 후기</h2>
+    <p class="section-lead center">실제 프로그램에 참여한 리더와 구성원들이 남긴 86개의 이야기입니다. 나를 보다 → 마음을 다스리다 → 더 명료하게 선택하다 → 사람을 다르게 만나다 → 조직으로 확장하다 → 다시 연습하며 삶과 일에 이어가다.</p>
+
+    <div class="filters" role="tablist" aria-label="후기 주제">
+      <button class="pill is-active" data-filter="all" role="tab" aria-selected="true" data-note="각 주제의 대표 후기 18개를 먼저 보여드립니다."><span class="pill-dot" aria-hidden="true"></span>전체</button>
+      <button class="pill" data-filter="self" role="tab" aria-selected="false" data-note="외부에서 나로 주의를 돌리고, 자신을 알아차린다">자기인식</button>
+      <button class="pill" data-filter="emotion" role="tab" aria-selected="false" data-note="감정과 나를 동일시하지 않고 거리를 만든다">감정조절</button>
+      <button class="pill" data-filter="decision" role="tab" aria-selected="false" data-note="한 발 떨어져 더 명료하게 판단한다">판단과 선택</button>
+      <button class="pill" data-filter="relation" role="tab" aria-selected="false" data-note="내 상태를 다스린 뒤 더 잘 듣고 관계한다">소통과 관계</button>
+      <button class="pill" data-filter="leadership" role="tab" aria-selected="false" data-note="리더의 내적 상태가 팀과 조직으로 전파된다">리더십과 조직</button>
+      <button class="pill" data-filter="morning" role="tab" aria-selected="false" data-note="배운 것을 다시 불러와 반복하고 일상에 적용한다">모닝 리트릿</button>
     </div>
-  </section>
+
+    <p class="filter-note" id="filterNote" role="status" aria-live="polite"></p>
+
+    <div class="quotes" id="quotes">
+      <!-- A. 자기인식·자기객관화 -->
+      <figure class="quote is-featured" data-group="self" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>모든 건 자기인식에서 출발한다는 단순한 명제를 다시 깨닫는 소중한 기회가 됨.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote is-featured" data-group="emotion" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>감정과 나를 분리하여 생각하여 감정이 내가 되는것을 막을 수 있을것 같습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote is-featured" data-group="decision" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>감정이나 생각을 자각하고 한 발 떨어져서 객관적이고 합리적인 결정을 할 수 있겠다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote is-featured" data-group="relation" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>동료나 팀원들과 소통할때 내 마음을 다스려가면서 원활한 대화를 나눌수 있을것같습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote is-featured" data-group="leadership" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>리더의 심리적 안정감과 평정심은 조직원에게 반드시, 쉽게 전파됩니다. 그 반대는 더 빠르죠. 그렇기에 리더군에 대한 심리 개선 프로그램은 꼭 필요합니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote is-featured" data-group="morning" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>이전 오프라인 교육 이후 바쁜 일상에 잊었던 내용들을 다시한번 생각할수 있어서 좋았음.</blockquote><figcaption>모닝 리트릿 · 워크숍 경험의 재활성화</figcaption></figure>
+      <figure class="quote is-featured" data-group="self" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>타인과 외부요인에 대한 깊은 주의에 익숙한 우리들이 나 자신으로 주의 방향을 틀어보는 계기가 되고, 이를 통해 나 스스로의 상태를 알아차리고 이해하며, 미래 행동과 심리적 방향성을 세울 수 있다고 생각하기에 추천합니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote is-featured" data-group="emotion" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>감정은 내가 아니다. 인지하는거다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote is-featured" data-group="decision" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>스트레스나 복잡한 상황 발생시 성급하지 않게 판단할 수 있을것 같습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote is-featured" data-group="relation" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>면담 중 들이쉬는 호흡으로 경청 실행.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote is-featured" data-group="leadership" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>결국 나를 잘 다스려야 내가 이끄는 조직도 잘 나아갈수 있음.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote is-featured" data-group="morning" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>하루 내적상태를 선택하는 인싸이트.</blockquote><figcaption>모닝 리트릿 · 알아차림에서 선택으로</figcaption></figure>
+      <figure class="quote is-featured" data-group="self" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>본인을 더 잘 알아가는 교육이었고, 다른 교육들은 지식이나 방법 등을 배우는 교육이었으면 이번 교육은 멈춰서 비울 줄 알게되는 교육이었습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote is-featured" data-group="emotion" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>다른 사람 감정 살피기에 급급했지, 내 마음을 다스리는 방법을 몰랐습니다. 이번 교육을 통해 내 감정을 다스림으로 일과 조직, 가족과 더 원활한 관계를 맺을 수 있는 인사이트를 얻은거 같습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote is-featured" data-group="decision" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>명료한 의식으로 정확한 의사결정 수행.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote is-featured" data-group="relation" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>자신을 돌아보고 이해하여 동료를 생각하는 마음가짐의 변화를 줄 수 있다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote is-featured" data-group="leadership" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>리더의 심리 안정감을 증진시켜 리더십 발휘는 물론 조직 운영에도 매우 긍정적인 영향을 미칠 것으로 기대함.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote is-featured" data-group="morning" data-featured="1"><p class="quote-badge">★ 대표 후기</p><blockquote>일회성에 끝나지 않고 지속 이어지는 프로그램에 많은 효과를 느꼈습니다. 감사합니다.</blockquote><figcaption>모닝 리트릿 · 지속적인 practice로</figcaption></figure>
+      <figure class="quote" data-group="self"><blockquote>자기를 떨어져서 객관화 시각으로 볼 수 있는 것. 자기를 그대로 바라보고 성찰할수 있음.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote" data-group="emotion"><blockquote>감정을 나와 동일시 하지 않고 바라보고 선택하라는 이야기.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote" data-group="decision"><blockquote>리더들이 업무를 함에 있어서 잠깐의 마음챙김을 통해 평정심 유지 및 바른판단에 도움될 듯.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote" data-group="relation"><blockquote>리더의 마음에 여유가 팀원과의 소통과 공감에 큰 도움이 되고 조직문화 개선 및 성과 개선에 큰 도움이 됩니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote" data-group="leadership"><blockquote>리더가 평온해야 조직원들을 제대로 코칭하고 소통할 수 있으므로 후임 팀장들에게도 추천해 주고 싶다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>원데이 수업 내용을 다시한번 상기. 마음챙김을 실천하는데 지속적인 자극이 되어 줘서 좋음.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+      <figure class="quote" data-group="self"><blockquote>평상시 소외된 나에 대해 자각하지 못했는데, 의식적으로 감각을 매개체로 나에게 집중함으로써 중심을 잡는 방법을 알게되었음.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote" data-group="emotion"><blockquote>팀장생활이 다년차가 되면서 느끼는 감정의 상처를 인지하고 견디는 힘.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote" data-group="decision"><blockquote>복잡하고 다양한 업무속에서 명확하고 올바른 의사결정.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote" data-group="relation"><blockquote>팀원과 의견 차이가 있을 때, 대화 하면서 마음챙김을 통해 좀 더 원만한 대화를 이어갈 수 있을것 같다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote" data-group="leadership"><blockquote>자신의 마음챙김이 되어야 조직이 강건해질것. 적극 확대 추천합니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>앞으로도 이런 시간을 통해 잊었던 명상의 감각을 지속 유지했으면합니다.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+      <figure class="quote" data-group="self"><blockquote>나 자신을 돌아보고 성찰할 수 있는 방법론적인 강의가 좋았다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote" data-group="emotion"><blockquote>업무만 하다보니 내 감정에 많이 휘둘리면서 살아갑니다. 짧은 하루였지만 잠깐 그 감정을 돌아보고 살아가는 힘을 얻을 수 있는 시간이었습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote" data-group="decision"><blockquote>단순 회복이 아닌 궁극적으로 집중력을 키우고, 효율적인 업무까지 할수있다는 점이 인상적이었음.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote" data-group="relation"><blockquote>개인의 마음챙김이 주변 관계에도 좋은 영향을 미침을 배웠습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote" data-group="leadership"><blockquote>단순히 개인의 쉼과 회복뿐만 아니라 리더십을 강화할 수 있는 강의로 리더뿐만 아니라 리더로의 성장 가능성이 있는 구성원까지 확대해서 참여할 수 있으면 좋겠습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>어렵지 않음에도 혼자 하기 힘든 일이기 때문에.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+      <figure class="quote" data-group="self"><blockquote>평소에 지나치고 못 느꼈던 감각을 일깨우고, 자신에게 집중하는 것이 필요하다는 점이 가장 남습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote" data-group="emotion"><blockquote>감정을 분리하고 타자화하는 방식, 호흡과 관조를 통해 평정심을 찾는 법.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote" data-group="decision"><blockquote>감정에 치우친 소통 혹은 판단 지양.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote" data-group="relation"><blockquote>팀원들과의 공감대 형성에… 나의 고집이나 아집을 버릴수 있을듯.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote" data-group="leadership"><blockquote>리더로서 자기인식에 대한 중요성을 알게됨. 마음챙김을 통해 리더십 향상에 도움을 줄 수 있음.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>업무시작전 일상에서도 명상과 집중을 할수 있는 습관을 배울수 있는것 같아요.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+      <figure class="quote" data-group="self"><blockquote>자신을 되돌아보고 안정을 찾을 수 있는 명상의 방법을 직접 해보면서 느끼는 부분이 좋았습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote" data-group="emotion"><blockquote>잠시 내려놓고 나와 내 감정을 분리하는 느낌.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote" data-group="decision"><blockquote>생각 감정 감성을 분리하여 어떤 결정을할때 더욱 신중해질것같습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote" data-group="relation"><blockquote>심리적 안정감을 바탕으로 팀원을 좀더 여유롭게 대할 수 있을 것 같다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote" data-group="leadership"><blockquote>마음의 건강이 조직문화를 바꿈.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>마음을 가라앉히고 업무에 몰입할 수 있도록 도와줌.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+      <figure class="quote" data-group="self"><blockquote>상황과 자신, 감정과 자신을 분리하여 오롯이 이루고자 하는 것, 원래의 자신에 집중하는 것이 필요하다는 것을 인식하게 됨.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote" data-group="emotion"><blockquote>감각에 둔감해지며 감정을 소모하거나 표출하는 일이 잦았는데, 감각에 예민해지는 경험을 통해 이를 완화시킬 수 있다는 점이 인상깊었습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote" data-group="decision"><blockquote>평상심을 갖고 의사결정을 할 수 있을듯합니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote" data-group="relation"><blockquote>마음챙김 통해 감정에 치우침을 줄이고 소통 강화에 활용.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote" data-group="leadership"><blockquote>금번 교육을 통해 팀장들의 마음챙김 등을 지원해주심에 감사드리며 이것이 회사의 성과로 연결되리라 확신합니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>일상 업무를 대하는 나의 마음을 알아차림을 통해 준비를 할 수 있어 좋았습니다.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+      <figure class="quote" data-group="self"><blockquote>몸과 마음의 상태가 다르다는 것을 알게해준 명상의 시간과 안정적으로 인식하고 느낄수 있던 실습.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote" data-group="emotion"><blockquote>감정 밑에 깔린 욕구와 생각 파악하기. 자기 감정 인지와 감정 다스리기.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote" data-group="decision"><blockquote>감정 아닌 평정심에서의 객관적 판단.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote" data-group="relation"><blockquote>팀원들과 소통을 잘하게되어 팀웍 향상에 도움이 될거 같음.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote" data-group="leadership"><blockquote>조직 리더로서 평정심을 갖고 구성원을 대하는 것이 성과에 큰 영향을 줄거라 생각합니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>정신없이 시작했던 아침을 편안하고 안정된 마음으로 시작하면서 일의 우선순위 집중할 항목들이 명료해졌다.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+      <figure class="quote" data-group="self"><blockquote>자신의 생각에 대해 돌아보고, 자신의 몸에 대해 인지하게 되는 좋은 시간.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote" data-group="emotion"><blockquote>화를 다스리는법, 잠시 멈춤!!</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote" data-group="decision"><blockquote>중요한 결정에서 선택과 집중에 도움될것 같음.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote" data-group="relation"><blockquote>서로 감정적이며 즉흥적인 소통을 지양하는데 도움이 될것 같습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote" data-group="leadership"><blockquote>리더의 감정 컨트롤로 조직 전체의 분위기와 효율 향상.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>아침 명상으로 하루를 미리 예습해보는 시간이었습니다.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+      <figure class="quote" data-group="self"><blockquote>복잡하고 스트레스 받는 근무환경 속에서 잠시 한발 물러서서 마음을 챙기고 돌아보며 스트레스를 관리하는 방법을 터득하는 기회라 좋았습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote" data-group="emotion"><blockquote>스트레스를 받을때 호흡법으로 조절 가능할것 같습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote" data-group="decision"><blockquote>평정심을 유지하며 정확한 판단력.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote" data-group="relation"><blockquote>팀원들을 대할때 더 경청하는 모습과 여유를 가질수 있을것 같습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote" data-group="leadership"><blockquote>조직 문화 향상에도 큰 도움이 될것으로 생각됩니다. 성과가 좋거나 반대로 조직 문화가 저조한 팀단위로 진행하면 조직문화, 성과에 큰 도움이 될꺼 같습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>호흡명상과 하루업무 계획연계 사전 시뮬레이션 및 감정 체크 내용.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+      <figure class="quote" data-group="self"><blockquote>잠시나마 자신의 감각을 통해 마음을 볼 수 있는 소중한 시간이었습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote" data-group="emotion"><blockquote>긴장되는 순간, 화가나는 순간에 평정심 유지 및 안정감.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote" data-group="decision"><blockquote>감정에 휘둘리지 않는 판단.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote" data-group="relation"><blockquote>자기를 돌아봄으로써 조직구성원과의 화합에 큰 도움이 될 듯 합니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote" data-group="leadership"><blockquote>리더의 심적안정감 회복이 구성원과의 소통 시 영향을 미칠 것을 기대함.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>하루를 리뷰해보는 명상. 스스로 잠시 멈춤을 실행할 수 있음.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+      <figure class="quote" data-group="self"><blockquote>바쁘고 벅찬 일상에서 벗어나 좋은 환경에서 나의 상태를 인지하고 인정함으로써 나에 대한 사랑과 회복방법을 깨닫게 된 것이 너무 큰 수확인 것 같습니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 자기인식</figcaption></figure>
+      <figure class="quote" data-group="emotion"><blockquote>본인의 감정상태를 자각하는 법. 마음가짐을 다스릴수 있는 좋은 과정입니다.</blockquote><figcaption>마음챙김 리더십 워크숍 · 감정조절</figcaption></figure>
+      <figure class="quote" data-group="decision"><blockquote>좀 더 이성적인 판단으로 리딩하는 능력향상 기대.</blockquote><figcaption>마음챙김 리더십 워크숍 · 판단과 선택</figcaption></figure>
+      <figure class="quote" data-group="relation"><blockquote>강력 추천, 나를 돌아보고 마음을 진정시켜, 나의 발전과 동료와의 협업에 긍정적인 효과를 기대.</blockquote><figcaption>마음챙김 리더십 워크숍 · 소통과 관계</figcaption></figure>
+      <figure class="quote" data-group="leadership"><blockquote>리더가 리더스스로를 인정하고 감정조절을 잘 컨트롤 하는 상황에서 소통하면 긍정적 효과 기대.</blockquote><figcaption>마음챙김 리더십 워크숍 · 리더십과 조직</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>호흡하면서 몸이 릴렉스되면 긴장 완화, 정신이 맑아짐. 업무시작전 정신이 맑아짐.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>아침 출근때 복잡한 마음이 정리된 느낌입니다. 그리고 아침에 참여하는 것이 번거롭게 느껴졌던것도 사실이지만 막상 참여하니 하길 잘했다는 생각이 듭니다. 다음에도 참여하고싶습니다.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+      <figure class="quote" data-group="morning"><blockquote>오늘의 일과를 정리하는것이었습니다. 짧은 시간이라도 이렇게 정리하는게 하루를 시작하는데 큰 도움이 되는것 같습니다.</blockquote><figcaption>모닝 리트릿</figcaption></figure>
+    </div>
+
+    <div class="quotes-more">
+      <button class="btn btn-dark" id="moreQuotes" type="button">후기 더 보기</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 아카이브 ══════════ -->
+<section class="band" id="archive">
+  <div class="wrap">
+    <p class="eyebrow">Archive · 2016 ~ 현재</p>
+    <h2 class="heading-lg">활동 스케치 아카이브</h2>
+    <p class="section-lead">강의실과 리트릿, 온라인 스튜디오와 숲길까지 — 현장에서 쌓아온 시간들입니다.</p>
+
+    <div class="gallery" id="gallery">
+      <button class="gitem" data-src="assets/gallery/g09.jpg"><img src="assets/gallery/g09.jpg" alt="호숫가 리트릿 명상 세션" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g30.jpg"><img src="assets/gallery/g30.jpg" alt="호수 옆 잔디밭에서의 야외 걷기 명상" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g33.jpg"><img src="assets/gallery/g33.jpg" alt="대형 명상홀 단체 교육" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g03.jpg"><img src="assets/gallery/g03.jpg" alt="한옥에서 진행된 명상 세션" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g11.jpg"><img src="assets/gallery/g11.jpg" alt="사찰 법당에서의 강연" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g06.jpg"><img src="assets/gallery/g06.jpg" alt="싱잉볼을 든 명상 진행" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g26.jpg"><img src="assets/gallery/g26.jpg" alt="숲길 걷기 명상" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g20.jpg"><img src="assets/gallery/g20.jpg" alt="연민적 리더십 강의" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g22.jpg"><img src="assets/gallery/g22.jpg" alt="마음챙김의 혁명 강의 장면" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g05.jpg"><img src="assets/gallery/g05.jpg" alt="뇌의 구조적 변화 강의" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g34.jpg"><img src="assets/gallery/g34.jpg" alt="세팅이 끝난 리트릿 명상 공간" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g14.jpg"><img src="assets/gallery/g14.jpg" alt="대규모 명상 교육장 세팅" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g24.jpg"><img src="assets/gallery/g24.jpg" alt="리더를 위한 마음챙김 진단 세션" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g28.jpg"><img src="assets/gallery/g28.jpg" alt="자기공감 명상 워크숍" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g31.jpg"><img src="assets/gallery/g31.jpg" alt="지금 어떤 마음으로 왔는가 세션 오프닝" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g21.jpg"><img src="assets/gallery/g21.jpg" alt="잠시 멈춤 호흡 마음챙김 강의" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g19.jpg"><img src="assets/gallery/g19.jpg" alt="온라인 라이브 스튜디오 강의" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g01.jpg"><img src="assets/gallery/g01.jpg" alt="명상 콘텐츠 촬영 현장" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g17.jpg"><img src="assets/gallery/g17.jpg" alt="명상 영상 촬영 스튜디오" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g35.jpg"><img src="assets/gallery/g35.jpg" alt="리더의 마음챙김 회복과 자각 강의 준비" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g37.jpg"><img src="assets/gallery/g37.jpg" alt="대한민국 제22회 코칭컨페스티벌 단독 세션 발표" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g15.jpg"><img src="assets/gallery/g15.jpg" alt="싱잉볼 클로즈업" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g36.jpg"><img src="assets/gallery/g36.jpg" alt="기업 마음챙김 프로그램 워크북" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g02.jpg"><img src="assets/gallery/g02.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g04.jpg"><img src="assets/gallery/g04.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g07.jpg"><img src="assets/gallery/g07.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g08.jpg"><img src="assets/gallery/g08.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g10.jpg"><img src="assets/gallery/g10.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g12.jpg"><img src="assets/gallery/g12.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g13.jpg"><img src="assets/gallery/g13.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g16.jpg"><img src="assets/gallery/g16.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g18.jpg"><img src="assets/gallery/g18.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g23.jpg"><img src="assets/gallery/g23.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g25.jpg"><img src="assets/gallery/g25.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g27.jpg"><img src="assets/gallery/g27.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g29.jpg"><img src="assets/gallery/g29.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g32.jpg"><img src="assets/gallery/g32.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+      <button class="gitem" data-src="assets/gallery/g38.jpg"><img src="assets/gallery/g38.jpg" alt="조이캄 활동 기록" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 문의 폼 ══════════ -->
+<section class="band band-contact" id="contact">
+  <div class="wrap">
+    <div class="contact">
+
+      <div class="contact-info">
+        <p class="eyebrow">Partnership</p>
+        <h2 class="heading-lg">비즈니스 협업 및 문의</h2>
+        <p class="contact-claim">기업과 기관의 특성에 맞는 마음챙김·컴패션 프로그램을 함께 설계합니다.</p>
+        <p>리더십 개발, 임직원 마음건강, 번아웃 예방과 내면역량 향상을 위한 명상교육·명상코칭·그룹 프로그램을 기획하고 운영합니다.</p>
+        <p>일회성 강연부터 지속형 교육과 코칭까지, 대상과 목적, 현장의 필요를 충분히 이해한 뒤 적합한 프로그램을 제안드립니다.</p>
+
+        <ul class="steps">
+          <li><span>1</span>문의 남기기 — 옆의 양식을 작성해 주세요.</li>
+          <li><span>2</span>짧은 사전 미팅 — 기관의 상황과 기대를 듣습니다.</li>
+          <li><span>3</span>프로그램 제안 — 방향과 협업 방식을 함께 논의합니다.</li>
+        </ul>
+
+        <div class="contact-direct">
+          <a href="mailto:joycalm.biz@gmail.com"><b>이메일</b>joycalm.biz@gmail.com</a>
+          <a href="tel:01095899988"><b>문의</b>010-9589-9988</a>
+        </div>
+
+        <!-- 카카오톡 채널 '조이캄' -->
+        <a class="btn-kakao" href="https://pf.kakao.com/_pNhxnX" target="_blank" rel="noopener noreferrer">
+          <svg class="kakao-ico" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path fill="currentColor" d="M12 3C6.9 3 2.8 6.2 2.8 10.2c0 2.6 1.7 4.8 4.3 6.1-.2.7-.7 2.5-.8 2.9-.1.5.2.5.4.4.2-.1 2.6-1.7 3.6-2.4.5.1 1.1.1 1.7.1 5.1 0 9.2-3.2 9.2-7.1S17.1 3 12 3Z"/>
+          </svg>
+          카카오톡 채널 추가하기
+          <span class="kakao-name">조이캄</span>
+        </a>
+      </div>
+
+      <div class="form-card">
+        <h3 class="heading-sm">문의하기</h3>
+        <p class="form-sub">남겨주신 연락처로 영업일 기준 2일 이내에 회신드립니다.</p>
+
+        <form id="leadForm" novalidate>
+          <div class="field">
+            <label for="f-name">이름 <span class="req">*</span></label>
+            <input type="text" id="f-name" name="name" autocomplete="name" placeholder="홍길동" required>
+            <p class="err" data-for="f-name"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-email">이메일 <span class="req">*</span></label>
+            <input type="email" id="f-email" name="email" autocomplete="email" placeholder="name@company.com" required>
+            <p class="err" data-for="f-email"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-phone">전화번호 <span class="req">*</span></label>
+            <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="numeric" placeholder="010-0000-0000" required>
+            <p class="err" data-for="f-phone"></p>
+          </div>
+
+          <div class="field">
+            <label for="f-org">소속 · 직함 <span class="opt">(선택)</span></label>
+            <input type="text" id="f-org" name="org" autocomplete="organization" placeholder="○○그룹 인재개발팀 / 팀장">
+          </div>
+
+          <div class="field">
+            <label for="f-interest">관심 프로그램</label>
+            <select id="f-interest" name="interest">
+              <option value="마음챙김 리더십 프로그램">마음챙김 리더십 프로그램</option>
+              <option value="조직 마음챙김·컴패션 프로그램">조직 마음챙김·컴패션 프로그램</option>
+              <option value="명상 리더십 코칭">명상 리더십 코칭</option>
+              <option value="아직 정하지 못했습니다">아직 정하지 못했습니다 · 상담 후 결정</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-msg">문의 내용 <span class="opt">(선택)</span></label>
+            <textarea id="f-msg" name="message" rows="4" placeholder="대상 인원, 희망 시기, 기대하시는 점 등을 자유롭게 적어주세요."></textarea>
+          </div>
+
+          <label class="check">
+            <input type="checkbox" id="f-agree" name="agree" required>
+            <span>상담 진행을 위한 <b>개인정보 수집·이용</b>에 동의합니다. <span class="muted">(이름·이메일·전화번호 / 문의 처리 후 1년간 보관)</span> <span class="req">*</span></span>
+          </label>
+          <p class="err" data-for="f-agree"></p>
+
+          <button class="btn btn-blue btn-full" type="submit" id="submitBtn">문의 보내기</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 </main>
 
-<!-- ===== 푸터 ===== -->
+<!-- ══════════ 푸터 ══════════ -->
 <footer class="footer">
-  <div class="footer-inner">
-    <a class="nav-logo" href="#top" aria-label="조이캄 홈">
-      <svg class="dots" viewBox="0 0 18 18" aria-hidden="true">
-        <circle cx="2.5" cy="2.5" r="2.5"/><circle cx="9" cy="2.5" r="2.5"/><circle cx="15.5" cy="2.5" r="2.5"/>
-        <circle cx="2.5" cy="9" r="2.5"/><circle cx="15.5" cy="9" r="2.5"/>
-        <circle cx="2.5" cy="15.5" r="2.5"/><circle cx="9" cy="15.5" r="2.5"/><circle cx="15.5" cy="15.5" r="2.5"/>
-      </svg>
-      <span>조이캄 JoyCalm</span>
-    </a>
-    <p>© 2026 JoyCalm. All rights reserved.</p>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="brand-word">joycalm</span>
+        </a>
+        <p>고요함으로 내면에 중심을 세우고,<br>기쁨으로 가능성을 펼칩니다.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>프로그램</h5>
+        <a href="#programs">마음챙김 리더십 프로그램</a>
+        <a href="#programs">조직 마음챙김·컴패션 프로그램</a>
+        <a href="#programs">명상 리더십 코칭</a>
+        <a href="https://saddleppo-hub.github.io/mbsr2609/" target="_blank" rel="noopener noreferrer">K-MBSR 마음챙김 명상 과정</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>조이캄</h5>
+        <a href="#about">대표 소개</a>
+        <a href="#voices">참여 후기</a>
+        <a href="#archive">활동 아카이브</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>문의</h5>
+        <a href="mailto:joycalm.biz@gmail.com">joycalm.biz@gmail.com</a>
+        <a href="tel:01095899988">010-9589-9988</a>
+        <a href="#contact">문의하기</a>
+      </div>
+    </div>
+
+    <div class="footer-base">
+      <p>Copyright © 2026 SONG YOUNGMI · Mindfulness &amp; Leadership Contents. All rights reserved.</p>
+    </div>
   </div>
 </footer>
 
+<!-- 라이트박스 -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" id="lbClose" aria-label="닫기">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="이전 사진">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="다음 사진">&#8250;</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
