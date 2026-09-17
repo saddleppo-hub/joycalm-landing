@@ -78,9 +78,8 @@ const FORM_ENDPOINT  = 'https://formsubmit.co/ajax/' + CONTACT_EMAIL;
     shown.forEach(q => q.classList.remove('is-hidden'));
 
     if (moreBtn) {
-      const remaining = matched.length - shown.length;
-      moreBtn.hidden = remaining <= 0;
-      moreBtn.textContent = `후기 ${remaining}개 더 보기`;
+      moreBtn.hidden = matched.length - shown.length <= 0;
+      moreBtn.textContent = '후기 더 보기';
     }
   }
 
