@@ -58,6 +58,10 @@ img{ max-width:100%; display:block; }
 a{ color:inherit; }
 button{ font:inherit; color:inherit; }
 
+/* .btn 등의 display 선언이 브라우저 기본 [hidden] 규칙을 덮어쓰기 때문에
+   hidden 속성이 항상 먹히도록 못박아 둔다 */
+[hidden]{ display:none !important; }
+
 .wrap{ width:100%; max-width:var(--max); margin-inline:auto; padding-inline:24px; }
 
 /* ─────────── 타이포 ─────────── */
