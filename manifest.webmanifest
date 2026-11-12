@@ -1,0 +1,15 @@
+{
+  "name": "조이캄 JoyCalm",
+  "short_name": "조이캄",
+  "description": "마음챙김 리더십 · 명상교육 · 명상코칭",
+  "lang": "ko",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f9f4f2",
+  "theme_color": "#f9f4f2",
+  "icons": [
+    { "src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
