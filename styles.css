@@ -130,6 +130,14 @@ button{ font:inherit; color:inherit; }
 }
 .btn-dark:hover{ background:#1c1b1a; transform:translateY(-1px); }
 
+/* 개강 안내용 — Sunbeam Yellow 를 공지 포인트로 */
+.btn-candle{
+  background:var(--sunbeam-yellow); color:var(--charcoal-ink);
+  box-shadow:var(--shadow-subtle);
+}
+.btn-candle:hover{ background:#f7c800; transform:translateY(-1px); }
+.btn-candle svg{ flex:none; opacity:.72; }
+
 .btn:active{ transform:translateY(1px); }
 
 /* ─────────── 배너 ─────────── */
