@@ -777,3 +777,64 @@ button{ font:inherit; color:inherit; }
   .marquee{ overflow-x:auto; }
   .marquee-set:last-child{ display:none; }
 }
+
+/* ═══════════════════════════════════════════
+   연말 시즌 테마 (겨울 저녁)
+   ───────────────────────────────────────────
+   index.html 의 <body data-season="yearend"> 로 켜집니다.
+   해가 바뀌면 그 속성만 지우면 전부 원래대로 돌아옵니다.
+   새 색은 쓰지 않고 팔레트의 Deep Indigo / Twilight Violet /
+   Sunbeam Yellow 만 조합했습니다.
+   ═══════════════════════════════════════════ */
+
+[data-season="yearend"]{
+  /* 크림 바탕을 아주 미세하게 따뜻한 쪽으로 */
+  --page-cream:#faf3ed;
+  --linen:#e6ded4;
+
+  --winter-night:#281466;       /* Twilight Violet */
+  --winter-dusk:#3b197f;        /* Deep Indigo */
+  --winter-candle:#ffce00;      /* Sunbeam Yellow — 촛불 */
+}
+
+/* ─── 상단 배너: 노란 낮 → 겨울 저녁 ─── */
+[data-season="yearend"] .banner{
+  background:
+    radial-gradient(120% 220% at 15% 0%, rgba(255,206,0,.22) 0%, rgba(255,206,0,0) 46%),
+    linear-gradient(100deg, var(--winter-night) 0%, var(--winter-dusk) 100%);
+  color:#f3eefc;
+}
+[data-season="yearend"] .banner strong{ color:var(--winter-candle); }
+[data-season="yearend"] .banner-dot{
+  background:var(--winter-candle);
+  box-shadow:0 0 0 4px rgba(255,206,0,.18);   /* 작은 촛불 */
+}
+[data-season="yearend"] .banner a{ color:var(--winter-candle); }
+
+/* ─── 히어로: 위쪽에 은은한 촛불빛 번짐 ─── */
+[data-season="yearend"] .hero{ position:relative; }
+[data-season="yearend"] .hero::before{
+  content:"";
+  position:absolute; inset:-120px 0 auto 0; height:560px;
+  background:radial-gradient(70% 100% at 50% 0%, rgba(255,206,0,.16) 0%, rgba(255,206,0,.05) 38%, rgba(255,206,0,0) 72%);
+  pointer-events:none; z-index:0;
+}
+[data-season="yearend"] .hero > .wrap{ position:relative; z-index:1; }
+
+/* ─── 아카이브: 한 해를 돌아보는 '밤의 갤러리' ─── */
+[data-season="yearend"] #archive{
+  background:
+    radial-gradient(90% 120% at 50% -10%, rgba(255,206,0,.10) 0%, rgba(255,206,0,0) 55%),
+    linear-gradient(170deg, var(--winter-night) 0%, var(--winter-dusk) 100%);
+}
+[data-season="yearend"] #archive .eyebrow{ color:#c9b8ef; }
+[data-season="yearend"] #archive .eyebrow-dot{ background:var(--winter-candle); }
+[data-season="yearend"] #archive .heading-lg{ color:#fdfbff; }
+[data-season="yearend"] #archive .section-lead{ color:#cdc0e8; }
+[data-season="yearend"] #archive .gitem img{
+  filter:brightness(.94) saturate(.96);
+  transition:transform .3s ease, filter .3s ease;
+}
+[data-season="yearend"] #archive .gitem:hover img{
+  filter:brightness(1.06) saturate(1.02);
+}
